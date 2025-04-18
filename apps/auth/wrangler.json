@@ -1,0 +1,18 @@
+{
+  "compatibility_date": "2024-11-01",
+  "main": "src/issuer.ts",
+  "name": "auth",
+  "upload_source_maps": true,
+  "kv_namespaces": [
+    {
+      "binding": "CloudflareAuthKV",
+      "id": "35f7691ee97140189cc267b984d6bcf9",
+      "preview_id": "64a4cc09171448fabc22fcd650f96f8d"
+    }
+  ],
+
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": ["nodejs_compat"]
+}

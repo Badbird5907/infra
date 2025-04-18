@@ -1,11 +1,17 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@badbird/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@badbird/ui/*": [
+        "../../packages/ui/src/*"
+      ],
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "**/*.ts",

@@ -1,10 +1,9 @@
 {
-  "extends": "@badbird/typescript-config/react-library.json",
+  "extends": "@badbird/typescript-config/esm.json",
   "compilerOptions": {
-    //"outDir": "dist"
     "baseUrl": ".",
     "paths": {
-      "@badbird/ui/*": ["./src/*"]
+      "@badbird/db/*": ["./src/*"]
     }
   },
   "include": ["."],

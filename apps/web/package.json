@@ -11,14 +11,17 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@badbird/auth-commons": "workspace:*",
+    "@badbird/ui": "workspace:*",
+    "@openauthjs/openauth": "^0.4.3",
+    "@radix-ui/react-slot": "^1.2.0",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@badbird/eslint-config": "workspace:*",
+    "@badbird/typescript-config": "workspace:*",
     "@types/node": "^22.14.0",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
