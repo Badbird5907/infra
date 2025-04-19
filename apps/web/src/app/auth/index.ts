@@ -6,8 +6,8 @@ export { subjects } from "@badbird/auth-commons"
 
 export const client = createClient({
   clientID: "nextjs",
-  // issuer: "https://auth.badbird.dev",
-  issuer: "http://localhost:8787",
+  issuer: "https://auth.badbird.dev",
+  // issuer: "http://localhost:8787",
 })
 
 export async function setTokens(access: string, refresh: string) {

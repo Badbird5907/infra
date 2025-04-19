@@ -9,7 +9,6 @@ import { coreUsers, createDb } from "@/src/db"
 import { GoogleProvider } from "@openauthjs/openauth/provider/google"
 import { Theme } from "@openauthjs/openauth/ui/theme"
 import { WorkerMailer } from 'worker-mailer'
-import { sql } from "drizzle-orm"
 import { PasswordProvider } from "@openauthjs/openauth/provider/password"
 import { PasswordUI } from "@openauthjs/openauth/ui/password"
 
