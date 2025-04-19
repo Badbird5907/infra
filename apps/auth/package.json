@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "startdev": "wrangler dev"
+    "startdev": "wrangler dev",
+    "build": "wrangler build"
   },
   "keywords": [],
   "author": "",
