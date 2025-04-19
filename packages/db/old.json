@@ -1,23 +1,18 @@
 {
-  "name": "@badbird5907/db",
-  "version": "0.0.3",
+  "name": "@badbird/db",
+  "version": "0.0.0",
   "type": "module",
+  "private": true,
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "build": "tsup",
+    "build": "tsc",
     "dev": "tsc --watch",
+    "lint": "eslint . --max-warnings 0",
     "load-env": "dotenv -e ../../.env --",
     "db:generate": "pnpm load-env && drizzle-kit generate",
     "db:migrate": "pnpm load-env && drizzle-kit migrate",
     "db:deploy": "drizzle-kit generate && drizzle-kit migrate",
     "db:studio": "pnpm load-env && drizzle-kit studio"
   },
-  "types": "dist/index.d.ts",
-  "main": "dist/index.js",
-  "source": "./src/index.ts",
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@openauthjs/openauth": "^0.4.2",
     "@t3-oss/env-nextjs": "^0.12.0",
@@ -30,21 +25,13 @@
     "@badbird/eslint-config": "workspace:*",
     "@badbird/typescript-config": "workspace:*",
     "@turbo/gen": "^2.5.0",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.14.0",
     "@types/pg": "^8.11.11",
     "drizzle-kit": "^0.30.5",
-    "tsup": "^8.4.0"
+    "tsx": "^4.19.3"
   },
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./schema": {
-      "require": "./dist/schema.cjs",
-      "import": "./dist/schema.js",
-      "types": "./dist/schema.d.ts"
-    }
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
   }
 }

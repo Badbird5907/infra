@@ -11,7 +11,7 @@ import { Theme } from "@openauthjs/openauth/ui/theme"
 import { WorkerMailer } from 'worker-mailer'
 import { PasswordProvider } from "@openauthjs/openauth/provider/password"
 import { PasswordUI } from "@openauthjs/openauth/ui/password"
-import { CoreUser, db } from "@badbird/db"
+import { CoreUser, db } from "@badbird5907/db"
 
 interface Env {
   CloudflareAuthKV: KVNamespace
