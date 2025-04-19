@@ -131,6 +131,7 @@ export default {
             id: user.id,
             email: user.email,
             username: user.username,
+            admin: user.admin,
           })
         }
         throw new Error("Invalid provider")

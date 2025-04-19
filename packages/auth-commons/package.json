@@ -1,10 +1,14 @@
 {
   "name": "@badbird5907/auth-commons",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "build": "tsup"
   },
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "source": "./src/index.ts",
   "dependencies": {
     "@openauthjs/openauth": "^0.4.2",
     "zod": "^3.23.8"
@@ -13,9 +17,14 @@
     "@badbird/eslint-config": "workspace:*",
     "@badbird/typescript-config": "workspace:*",
     "@turbo/gen": "^2.5.0",
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.0",
+    "tsup": "^8.4.0"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
   }
 }

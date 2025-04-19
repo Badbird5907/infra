@@ -6,6 +6,7 @@ export const subjects = createSubjects({
     id: z.string(),
     email: z.string(),
     username: z.string(),
+    admin: z.boolean(),
   }),
 })
 export type Subject = z.infer<typeof subjects.user>
