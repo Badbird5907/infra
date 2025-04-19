@@ -5,6 +5,7 @@
     "jsxImportSource": "hono/jsx",
     "paths": {
       "@/*": ["./*"],
+      "@badbird5907/auth-commons": ["../../packages/auth-commons/src"],
     },
     "plugins": [
     ]
