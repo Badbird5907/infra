@@ -11,7 +11,7 @@ import { Theme } from "@openauthjs/openauth/ui/theme"
 import { WorkerMailer } from 'worker-mailer'
 import { PasswordProvider } from "@openauthjs/openauth/provider/password"
 import { PasswordUI } from "@openauthjs/openauth/ui/password"
-import { CoreUser } from "@badbird/db"
+import { CoreUser, db } from "@badbird/db"
 
 interface Env {
   CloudflareAuthKV: KVNamespace
@@ -23,7 +23,6 @@ interface Env {
   SMTP_FROM: string
 }
 
-let db: ReturnType<typeof createDb> | null = null
 
 const theme: Theme = {
   title: "Badbird",
@@ -34,11 +33,9 @@ const theme: Theme = {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext) {
-    if (!db) {
-      db = createDb({
-        DATABASE_URL: env.DATABASE_URL,
-      })
-    }
+    const db = createDb({
+      DATABASE_URL: env.DATABASE_URL,
+    })
 
     async function getUser(email: string): Promise<CoreUser | undefined> {
       let user = await db!.query.coreUsers.findFirst({
