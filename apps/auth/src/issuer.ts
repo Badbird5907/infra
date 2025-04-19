@@ -11,6 +11,7 @@ import { Theme } from "@openauthjs/openauth/ui/theme"
 import { WorkerMailer } from 'worker-mailer'
 import { PasswordProvider } from "@openauthjs/openauth/provider/password"
 import { PasswordUI } from "@openauthjs/openauth/ui/password"
+import { CoreUser } from "@badbird/db"
 
 interface Env {
   CloudflareAuthKV: KVNamespace
@@ -39,7 +40,7 @@ export default {
       })
     }
 
-    async function getUserAndOrgs(email: string): Promise<any | null> {
+    async function getUser(email: string): Promise<CoreUser | undefined> {
       let user = await db!.query.coreUsers.findFirst({
         where: (user, { eq }) => eq(user.email, email),
       })
@@ -122,7 +123,7 @@ export default {
       },
       success: async (ctx, value) => {
         if (value.provider === "password") {
-          const user = await getUserAndOrgs(value.email)
+          const user = await getUser(value.email)
           if (!user) {
             throw new Error("Failed to create or retrieve user");
           }
@@ -130,7 +131,6 @@ export default {
           return ctx.subject("user", {
             id: user.id,
             email: user.email,
-            username: user.username,
             admin: user.admin,
           })
         }

@@ -37,3 +37,4 @@ const db = drizzle(connection, {
 
 export * from "./schema";
 export { db };
+export * from "./types";
