@@ -26,6 +26,7 @@
     "@cloudflare/workers-types": "^4.20250418.0",
     "@types/node": "^22.14.1",
     "@types/nodemailer": "^6.4.17",
-    "@types/pg": "^8.11.11"
+    "@types/pg": "^8.11.11",
+    "wrangler": "^4.12.0"
   }
 }
