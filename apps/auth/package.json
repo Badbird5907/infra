@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@badbird/auth-commons": "workspace:*",
+    "@badbird5907/auth-commons": "workspace:*",
     "@badbird/db": "workspace:*",
     "@openauthjs/openauth": "^0.4.2",
     "@standard-schema/spec": "^1.0.0",

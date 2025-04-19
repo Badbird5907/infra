@@ -2,7 +2,7 @@ import { createClient } from "@openauthjs/openauth/client"
 import { cookies as getCookies } from "next/headers"
 
 
-export { subjects } from "@badbird/auth-commons"
+export { subjects } from "@badbird5907/auth-commons"
 
 export const client = createClient({
   clientID: "nextjs",

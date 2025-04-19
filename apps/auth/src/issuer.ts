@@ -4,7 +4,7 @@ import {
   type ExecutionContext,
   type KVNamespace,
 } from "@cloudflare/workers-types"
-import { subjects } from "@badbird/auth-commons"
+import { subjects } from "@badbird5907/auth-commons"
 import { coreUsers, createDb } from "@/src/db"
 import { GoogleProvider } from "@openauthjs/openauth/provider/google"
 import { Theme } from "@openauthjs/openauth/ui/theme"

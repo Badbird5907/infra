@@ -11,7 +11,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@badbird/auth-commons": "workspace:*",
+    "@badbird5907/auth-commons": "workspace:*",
     "@badbird/ui": "workspace:*",
     "@openauthjs/openauth": "^0.4.3",
     "@radix-ui/react-slot": "^1.2.0",

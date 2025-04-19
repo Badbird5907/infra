@@ -1,8 +1,7 @@
 {
-  "name": "@badbird/auth-commons",
+  "name": "@badbird5907/auth-commons",
   "version": "0.0.0",
   "type": "module",
-  "private": true,
   "scripts": {
     "lint": "eslint . --max-warnings 0"
   },
