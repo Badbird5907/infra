@@ -1,6 +1,6 @@
 {
   "name": "@badbird5907/auth-commons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -9,6 +9,9 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "source": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@openauthjs/openauth": "^0.4.2",
     "zod": "^3.23.8"
@@ -22,8 +25,8 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
   }
